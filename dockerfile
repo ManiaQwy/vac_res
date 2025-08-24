@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 COPY . .
 
@@ -17,4 +17,10 @@ CMD ["npm", "run", "serve"]
 
 
 #docker build -t dockertest .
+
+#docker images
+
+#docker run -d -p 8080:80 --name dockertest-container dockertest
+
+#http://localhost:8080/ (run in browser)
 
