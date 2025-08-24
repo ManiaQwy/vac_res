@@ -10,7 +10,6 @@ RUN npm install
 
 COPY . .
 
-ENV PORT=80
 EXPOSE 80
 
 CMD ["npm", "run", "serve"]
@@ -20,7 +19,7 @@ CMD ["npm", "run", "serve"]
 
 #docker images
 
-#docker run -d -p 8080:80 --name dockertest-container dockertest
+#docker run -it -p 8080:8080 dockertest
 
 #http://localhost:8080/ (run in browser)
 
